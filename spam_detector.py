@@ -47,6 +47,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 bow_transformer = CountVectorizer(analyzer=clean_messages).fit(messages['messages'])
 bow_messages = bow_transformer.transform(messages['messages'])
 
+#sparsity -->
 sparsity = (100.0 * bow_messages.nnz / (bow_messages.shape[0] * bow_messages.shape[1]))
 
 
